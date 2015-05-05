@@ -10,8 +10,15 @@ Then(/^a question is displayed$/) do
   results = query "label accessibilityLabel:'question-label'"
 
   results.each do | result |
-    puts result
   	expect( result['text'].length ).to be > 0
+  end
+end
+
+Then(/^the answer is not displayed$/) do
+  query_results = query "label accessibilityLabel:'answer-label'"
+
+  query_results.each do | result |
+    expect( result['text']).to eq("???")
   end
 end
 
@@ -19,6 +26,6 @@ end
 #   query_results = query "label accessibilityLabel:'answer-label'"
 
 #   query_results.each do | result |
-#   	expect( result['text']).to be "???"
+#   	expect( result['text']).to include("???"
 #   end
 # end
