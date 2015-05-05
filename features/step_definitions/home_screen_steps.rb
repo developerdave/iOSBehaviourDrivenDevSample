@@ -8,6 +8,13 @@ Given(/^I am viewing a question$/) do
   }
 end
 
+Given(/^I am viewing a question with answer displayed$/) do
+  steps %Q{
+    When I view a question
+
+  }
+end
+
 When(/^I view a question$/) do
   macro 'I touch "show-question-button"'
 

@@ -39,6 +39,8 @@ describe(@"QuizViewController", ^{
     beforeEach(^{
         AppDelegate *delegate = [UIApplication sharedApplication].delegate;
         _vc = (QuizViewController *)[[delegate window] rootViewController];
+        
+        _vc.currentQuestionIndex = 0;
     });
     
     
@@ -68,6 +70,21 @@ describe(@"QuizViewController", ^{
     });
     
     context(@"when viewing a question", ^{
+        
+        
+        it(@"should reset answer field", ^{
+            // Show a question
+            [_vc showQuestion:nil];
+            
+            // Show the answer
+            [_vc showAnswer:nil];
+            expect(_vc.answerLabel.text).toNot.equal(@"???");
+            
+            // Show another question and the answer field should be set
+            // back to default value
+            [_vc showQuestion:nil];
+            expect(_vc.answerLabel.text).to.equal(@"???");
+        });
         
         it(@"should set current question index", ^{
             [_vc showQuestion:nil];

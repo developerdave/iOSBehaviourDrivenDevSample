@@ -65,6 +65,9 @@
     
     // Display the string in the question label
     self.questionLabel.text = question;
+    
+    // Reset the answer label
+    self.answerLabel.text = @"???";
 }
 
 - (IBAction)showAnswer:(id)sender
