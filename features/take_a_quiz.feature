@@ -9,11 +9,11 @@ When I view a question
 Then a question is displayed
 And the answer is not displayed
 
-# Scenario: View next question
-# Given I am on the Quiz Screen
-# And I am viewing a question
-# When I view the next question
-# Then a new question is displayed
+Scenario: View next question
+Given I am on the Quiz Screen
+And I am viewing a question
+When I view the next question
+Then a new question is displayed
 # And the answer is blank
 
 # Scenario: View answer
