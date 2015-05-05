@@ -18,6 +18,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    QuizViewController *quizVC = [[QuizViewController alloc] init];
+    self.window.rootViewController = quizVC;
+    
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 
