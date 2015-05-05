@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuizViewController">
             <connections>
+                <outlet property="questionButton" destination="Kb7-dp-Q1o" id="YUS-ie-Xv5"/>
                 <outlet property="questionLabel" destination="enq-80-Vqr" id="Jia-so-g70"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,14 +20,29 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enq-80-Vqr">
                     <accessibility key="accessibilityConfiguration" label="question-label"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kb7-dp-Q1o">
+                    <rect key="frame" x="8" y="78" width="398" height="30"/>
+                    <color key="backgroundColor" red="0.92156862745098034" green="0.94117647058823528" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                    <accessibility key="accessibilityConfiguration" label="show-question-button"/>
+                    <state key="normal" title="Show Question">
+                        <color key="titleColor" red="0.92549019607843142" green="0.0" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="showQuestion:" destination="-1" eventType="touchUpInside" id="Cd8-rE-Ix0"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.33725490196078434" green="0.15686274509803921" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="enq-80-Vqr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="7PK-TY-Krk"/>
+                <constraint firstAttribute="trailingMargin" secondItem="Kb7-dp-Q1o" secondAttribute="trailing" id="HD4-by-Hgn"/>
+                <constraint firstItem="Kb7-dp-Q1o" firstAttribute="top" secondItem="enq-80-Vqr" secondAttribute="bottom" constant="20" id="P5S-kY-aC7"/>
                 <constraint firstAttribute="trailingMargin" secondItem="enq-80-Vqr" secondAttribute="trailing" id="YXQ-Hp-VxA"/>
+                <constraint firstItem="Kb7-dp-Q1o" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="gPP-Ma-9td"/>
                 <constraint firstItem="enq-80-Vqr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" constant="50" id="vJt-HL-Y1W"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>

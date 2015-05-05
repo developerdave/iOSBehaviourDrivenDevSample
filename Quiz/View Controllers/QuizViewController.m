@@ -11,6 +11,7 @@
 @interface QuizViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
+@property (weak, nonatomic) IBOutlet UIButton *questionButton;
 
 @end
 
@@ -22,6 +23,10 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (IBAction)showQuestion:(id)sender
+{
 }
 
 @end

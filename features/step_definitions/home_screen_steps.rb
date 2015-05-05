@@ -2,6 +2,10 @@ Given(/^I am on the Quiz Screen$/) do
   element_exists("label accessibilityLabel:'question-label'")
 end
 
+When(/^I view a question$/) do
+  macro 'I touch "show-question-button"'
+end
+
 # When(/^I view a quiz question$/) do
 #   macro 'I touch "show-question-button"'
 # end

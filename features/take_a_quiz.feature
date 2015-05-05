@@ -6,7 +6,8 @@ So I can improve my general knowledge
 Scenario: View quiz question
 Given I am on the Quiz Screen
 When I view a question
-Then the answer is not displayed
+Then a question is displayed
+And the answer is not displayed
 
 Scenario: View next question
 Given I am on the Quiz Screen
