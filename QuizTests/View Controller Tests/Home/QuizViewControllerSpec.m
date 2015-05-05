@@ -16,8 +16,13 @@
 
 @interface QuizViewController (Specs)
 
+@property (nonatomic) int currentQuestionIndex;
 @property (weak, nonatomic) IBOutlet UIButton *questionButton;
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
+
+@property (nonatomic, copy) NSArray *questions;
+
+- (IBAction)showQuestion:(id)sender;
 
 @end
 
@@ -44,6 +49,38 @@ describe(@"QuizViewController", ^{
             NSArray *actions = [button actionsForTarget:_vc forControlEvent:UIControlEventTouchUpInside];
             
             expect(actions[0]).to.equal(@"showQuestion:");
+        });
+    });
+    
+    context(@"when viewing a question", ^{
+        
+        it(@"should set current question index", ^{
+            [_vc showQuestion:nil];
+            
+            expect(_vc.currentQuestionIndex).to.beGreaterThan(0);
+        });
+        
+        it(@"should cycle around questions", ^{
+            // Work out how many questions there are
+            int numberOfQuestions = [_vc.questions count];
+            
+            // Make sure we have questions
+            expect(numberOfQuestions).to.beGreaterThan(0);
+            
+            // Move straight to the last question
+            _vc.currentQuestionIndex = numberOfQuestions;
+            
+            // Now show the next question
+            [_vc showQuestion:nil];
+            
+            // We should now be viewing the first question
+            expect(_vc.currentQuestionIndex).to.equal(0);
+        });
+        
+        it(@"should display the question", ^{
+            [_vc showQuestion:nil];
+            
+            expect(_vc.questionLabel.text).to.equal(_vc.questions[_vc.currentQuestionIndex]);
         });
     });
     
