@@ -14,7 +14,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *questionButton;
 
+@property (weak, nonatomic) IBOutlet UILabel *answerLabel;
+@property (weak, nonatomic) IBOutlet UIButton *answerButton;
+
 @property (copy, nonatomic) NSArray *questions;
+@property (copy, nonatomic) NSArray *answers;
 
 @end
 
@@ -28,11 +32,17 @@
     if (self) {
         
         // Create an array filled with questions
-        self.questions = @[
-                            @"From what is cognac made?",
-                            @"What is 7+7?",
-                            @"What is the capital of Vermont?"
-                           ];
+        self.questions =    @[
+                              @"From what is cognac made?",
+                              @"What is 7+7?",
+                              @"What is the capital of Vermont?"
+                            ];
+        
+        self.answers = @[
+                            @"Grapes",
+                            @"14",
+                            @"Montpelier"
+                        ];
     }
     
     return self;
@@ -55,6 +65,15 @@
     
     // Display the string in the question label
     self.questionLabel.text = question;
+}
+
+- (IBAction)showAnswer:(id)sender
+{
+    // What is the answer to the current question?
+    NSString *answer = self.answers[self.currentQuestionIndex];
+    
+    // Display it in the answer label
+    self.answerLabel.text = answer;
 }
 
 @end

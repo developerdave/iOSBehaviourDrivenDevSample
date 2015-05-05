@@ -19,10 +19,14 @@
 @property (nonatomic) int currentQuestionIndex;
 @property (weak, nonatomic) IBOutlet UIButton *questionButton;
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
+@property (weak, nonatomic) IBOutlet UIButton *answerButton;
+@property (weak, nonatomic) IBOutlet UILabel *answerLabel;
 
 @property (nonatomic, copy) NSArray *questions;
+@property (nonatomic, copy) NSArray *answers;
 
 - (IBAction)showQuestion:(id)sender;
+- (IBAction)showAnswer:(id)sender;
 
 @end
 
@@ -44,11 +48,22 @@ describe(@"QuizViewController", ^{
             expect(_vc.questionLabel).toNot.beNil;
         });
         
+        it(@"should have an outlet for the answer label", ^{
+            expect(_vc.answerLabel).toNot.beNil;
+        });
+        
         it(@"should wire up the question button", ^{
             UIButton *button = _vc.questionButton;
             NSArray *actions = [button actionsForTarget:_vc forControlEvent:UIControlEventTouchUpInside];
             
             expect(actions[0]).to.equal(@"showQuestion:");
+        });
+        
+        it(@"should wire up the answer button", ^{
+            UIButton *button = _vc.answerButton;
+            NSArray *actions = [button actionsForTarget:_vc forControlEvent:UIControlEventTouchUpInside];
+            
+            expect(actions[0]).to.equal(@"showAnswer:");
         });
     });
     
@@ -62,7 +77,7 @@ describe(@"QuizViewController", ^{
         
         it(@"should cycle around questions", ^{
             // Work out how many questions there are
-            int numberOfQuestions = [_vc.questions count];
+            long numberOfQuestions = [_vc.questions count];
             
             // Make sure we have questions
             expect(numberOfQuestions).to.beGreaterThan(0);
@@ -81,6 +96,23 @@ describe(@"QuizViewController", ^{
             [_vc showQuestion:nil];
             
             expect(_vc.questionLabel.text).to.equal(_vc.questions[_vc.currentQuestionIndex]);
+        });
+    });
+    
+    context(@"when viewing an answer", ^{
+       
+        it(@"should have an equal amount of questions and answers", ^{
+            expect([_vc.questions count]).to.equal([_vc.answers count]);
+        });
+        
+        it(@"should display correct answer", ^{
+            // View a question
+            [_vc showQuestion:nil];
+            
+            // View the answer
+            [_vc showAnswer:nil];
+            
+            expect(_vc.answers[_vc.currentQuestionIndex]).to.equal(_vc.answerLabel.text);
         });
     });
     

@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuizViewController">
             <connections>
+                <outlet property="answerButton" destination="z6N-fg-Q0G" id="Jgr-qd-ldJ"/>
+                <outlet property="answerLabel" destination="Ssh-Eo-ssu" id="HUk-jv-vVf"/>
                 <outlet property="questionButton" destination="Kb7-dp-Q1o" id="YUS-ie-Xv5"/>
                 <outlet property="questionLabel" destination="enq-80-Vqr" id="Jia-so-g70"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -32,7 +34,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="showQuestion:" destination="-1" eventType="touchUpInside" id="GgD-Mw-xDY"/>
+                        <action selector="showQuestion:" destination="-1" eventType="touchUpInside" id="9QX-rx-Wfs"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssh-Eo-ssu">
@@ -42,11 +44,26 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6N-fg-Q0G">
+                    <rect key="frame" x="8" y="236" width="398" height="30"/>
+                    <color key="backgroundColor" red="0.92156862750000001" green="0.94117647059999998" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <accessibility key="accessibilityConfiguration" label="show-answer-button"/>
+                    <state key="normal" title="Show Answer">
+                        <color key="titleColor" red="0.92549019610000005" green="0.0" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="showAnswer:" destination="-1" eventType="touchUpInside" id="gl7-mf-Dxg"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.33725490196078434" green="0.15686274509803921" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="z6N-fg-Q0G" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="1Iq-bF-QAe"/>
+                <constraint firstItem="z6N-fg-Q0G" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="6Tq-cf-eom"/>
                 <constraint firstItem="enq-80-Vqr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="7PK-TY-Krk"/>
                 <constraint firstAttribute="trailingMargin" secondItem="Kb7-dp-Q1o" secondAttribute="trailing" id="HD4-by-Hgn"/>
+                <constraint firstItem="z6N-fg-Q0G" firstAttribute="top" secondItem="Ssh-Eo-ssu" secondAttribute="bottom" constant="7.5" id="OHg-rM-38Z"/>
                 <constraint firstItem="Kb7-dp-Q1o" firstAttribute="top" secondItem="enq-80-Vqr" secondAttribute="bottom" constant="20" id="P5S-kY-aC7"/>
                 <constraint firstItem="Ssh-Eo-ssu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="T51-dc-YhN"/>
                 <constraint firstAttribute="trailingMargin" secondItem="enq-80-Vqr" secondAttribute="trailing" id="YXQ-Hp-VxA"/>
