@@ -10,6 +10,8 @@
 
 @interface QuizViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
+
 @end
 
 @implementation QuizViewController
@@ -21,6 +23,5 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
 
 @end

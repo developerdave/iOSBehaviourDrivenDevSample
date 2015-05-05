@@ -15,8 +15,11 @@
 		696496501AF421A100BC24B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6964964F1AF421A100BC24B5 /* Main.storyboard */; };
 		696496511AF421A100BC24B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6964964F1AF421A100BC24B5 /* Main.storyboard */; };
 		697994A21AF885E500D0F183 /* AppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 697994A11AF885E500D0F183 /* AppDelegateSpec.m */; };
-		697994A61AF88AFF00D0F183 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 697994A41AF88AFF00D0F183 /* QuizViewController.m */; };
-		697994A71AF88AFF00D0F183 /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 697994A51AF88AFF00D0F183 /* QuizViewController.xib */; };
+		697994AB1AF88CF700D0F183 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 697994A91AF88CF700D0F183 /* QuizViewController.m */; };
+		697994AC1AF88CF700D0F183 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 697994A91AF88CF700D0F183 /* QuizViewController.m */; };
+		697994AD1AF88CF700D0F183 /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 697994AA1AF88CF700D0F183 /* QuizViewController.xib */; };
+		697994AE1AF88CF700D0F183 /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 697994AA1AF88CF700D0F183 /* QuizViewController.xib */; };
+		697994B31AF893BF00D0F183 /* QuizViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 697994B21AF893BF00D0F183 /* QuizViewControllerSpec.m */; };
 		69D47F861AEA978700E1F9EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D47F851AEA978700E1F9EE /* main.m */; };
 		69D47F911AEA978700E1F9EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69D47F901AEA978700E1F9EE /* Images.xcassets */; };
 		69D47F941AEA978700E1F9EE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69D47F921AEA978700E1F9EE /* LaunchScreen.xib */; };
@@ -41,9 +44,10 @@
 		695028441AF39F5C000DACA0 /* calabash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = calabash.framework; sourceTree = "<group>"; };
 		6964964F1AF421A100BC24B5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		697994A11AF885E500D0F183 /* AppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegateSpec.m; path = "Supporting Files/AppDelegateSpec.m"; sourceTree = "<group>"; };
-		697994A31AF88AFF00D0F183 /* QuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuizViewController.h; path = "View Controllers/QuizViewController.h"; sourceTree = "<group>"; };
-		697994A41AF88AFF00D0F183 /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuizViewController.m; path = "View Controllers/QuizViewController.m"; sourceTree = "<group>"; };
-		697994A51AF88AFF00D0F183 /* QuizViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuizViewController.xib; path = "View Controllers/QuizViewController.xib"; sourceTree = "<group>"; };
+		697994A81AF88CF700D0F183 /* QuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuizViewController.h; path = "View Controllers/QuizViewController.h"; sourceTree = "<group>"; };
+		697994A91AF88CF700D0F183 /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuizViewController.m; path = "View Controllers/QuizViewController.m"; sourceTree = "<group>"; };
+		697994AA1AF88CF700D0F183 /* QuizViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuizViewController.xib; path = "View Controllers/QuizViewController.xib"; sourceTree = "<group>"; };
+		697994B21AF893BF00D0F183 /* QuizViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuizViewControllerSpec.m; path = "View Controller Tests/Home/QuizViewControllerSpec.m"; sourceTree = "<group>"; };
 		69D47F801AEA978700E1F9EE /* Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69D47F841AEA978700E1F9EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69D47F851AEA978700E1F9EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -192,9 +196,9 @@
 		69D47FAE1AEA989200E1F9EE /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				697994A31AF88AFF00D0F183 /* QuizViewController.h */,
-				697994A41AF88AFF00D0F183 /* QuizViewController.m */,
-				697994A51AF88AFF00D0F183 /* QuizViewController.xib */,
+				697994A81AF88CF700D0F183 /* QuizViewController.h */,
+				697994A91AF88CF700D0F183 /* QuizViewController.m */,
+				697994AA1AF88CF700D0F183 /* QuizViewController.xib */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -202,6 +206,7 @@
 		69D47FB41AEA99EE00E1F9EE /* View Controller Tests */ = {
 			isa = PBXGroup;
 			children = (
+				697994B21AF893BF00D0F183 /* QuizViewControllerSpec.m */,
 			);
 			name = "View Controller Tests";
 			sourceTree = "<group>";
@@ -319,6 +324,7 @@
 				6950283C1AF39EB7000DACA0 /* LaunchScreen.xib in Resources */,
 				6950283D1AF39EB7000DACA0 /* Images.xcassets in Resources */,
 				696496511AF421A100BC24B5 /* Main.storyboard in Resources */,
+				697994AE1AF88CF700D0F183 /* QuizViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +335,7 @@
 				69D47F941AEA978700E1F9EE /* LaunchScreen.xib in Resources */,
 				69D47F911AEA978700E1F9EE /* Images.xcassets in Resources */,
 				696496501AF421A100BC24B5 /* Main.storyboard in Resources */,
-				697994A71AF88AFF00D0F183 /* QuizViewController.xib in Resources */,
+				697994AD1AF88CF700D0F183 /* QuizViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +388,7 @@
 			files = (
 				695028371AF39EB7000DACA0 /* AppDelegate.m in Sources */,
 				695028381AF39EB7000DACA0 /* main.m in Sources */,
+				697994AC1AF88CF700D0F183 /* QuizViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +398,7 @@
 			files = (
 				69D47FAC1AEA97DC00E1F9EE /* AppDelegate.m in Sources */,
 				69D47F861AEA978700E1F9EE /* main.m in Sources */,
-				697994A61AF88AFF00D0F183 /* QuizViewController.m in Sources */,
+				697994AB1AF88CF700D0F183 /* QuizViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				697994B31AF893BF00D0F183 /* QuizViewControllerSpec.m in Sources */,
 				697994A21AF885E500D0F183 /* AppDelegateSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,6 +1,5 @@
-Given(/^I am on the Home Screen$/) do
-  element_exists("view")
-  sleep(STEP_PAUSE)
+Given(/^I am on the Quiz Screen$/) do
+  element_exists("label accessibilityLabel:'question-label'")
 end
 
 # When(/^I view a quiz question$/) do
